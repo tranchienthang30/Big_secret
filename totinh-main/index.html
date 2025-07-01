@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Big Secret</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <audio id="bgMusic" loop>
+    <source src="./music.mp3" type="audio/mp3" />
+  </audio>
+
+  <div id="intro" class="active">
+    <button id="startBtn">
+      Anh có điều muốn nói<br />Nhấn vào đây đi
+    </button>
+  </div>
+
+  <div id="mainContent">
+    <div id="line"></div>
+
+    <div id="final" class="final">
+      <p>Em đồng ý làm người yêu anh nhaaaaaa!!! 💖</p>
+      <div class="button-group">
+        <button id="btnYes">Đồng ý</button>
+        <button id="btnNo">Không</button>
+      </div>
+    </div>
+
+    <div id="msgYes" class="yesContent">
+      <h1>Cảm ơn em, yêu em!</h1>
+      <div class="gif_container">
+        <img
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnRobmhtNmo2enVydTNxMmk2dXNiN3A0cjUwOWRhcGgzZm51YjZuZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7y4Nc95399hsr24oYc/giphy.gif"
+          alt="Cute Gif" />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
