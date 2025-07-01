@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   "Anh đã suy nghĩ rất nhiều... liệu có nên giữ mãi trong lòng không.",
   "Nhưng nếu không nói ra, anh sợ sẽ đánh mất một điều quý giá nhất trong đời.",
   "Vì vậy hôm nay, anh gom hết can đảm để thổ lộ một điều...",
-  "Anh yêu em Trang à"
+  "Anh iuuuuuuu em Trang à"
 ];
 
 
