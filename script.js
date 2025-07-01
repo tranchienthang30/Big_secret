@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   "Anh đã suy nghĩ rất nhiều... liệu có nên giữ mãi trong lòng không.",
   "Nhưng nếu không nói ra, anh sợ sẽ đánh mất một điều quý giá nhất trong đời.",
   "Vì vậy hôm nay, anh gom hết can đảm để thổ lộ một điều...",
-  "Anh iuuuuuuu em Trang à"
+  "Anh iuuuuuu em Trang à"
 ];
 
 
@@ -81,13 +81,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // GIỮ NGUYÊN LOGIC NÚT "KHÔNG"
-  btnNo.addEventListener('mouseover', () => {
-    const maxX = window.innerWidth - btnNo.offsetWidth;
-    const maxY = window.innerHeight - btnNo.offsetHeight;
-    btnNo.style.position = 'fixed';
-    btnNo.style.left = `${Math.random() * maxX}px`;
-    btnNo.style.top = `${Math.random() * maxY}px`;
+  function moveNoButton() {
+  const maxX = window.innerWidth - btnNo.offsetWidth;
+  const maxY = window.innerHeight - btnNo.offsetHeight;
+  btnNo.style.position = 'fixed';
+  btnNo.style.left = `${Math.random() * maxX}px`;
+  btnNo.style.top = `${Math.random() * maxY}px`;
+}
+
+// Phát hiện thiết bị cảm ứng
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+// Máy tính: dùng hover
+if (!isMobile) {
+  btnNo.addEventListener('mouseover', moveNoButton);
+} else {
+  // Điện thoại: dùng touchstart
+  btnNo.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Ngăn chặn click
+    moveNoButton();
   });
+}
+
 
   btnNo.addEventListener('click', () => {
     alert('Thôi mà, bấm lại nút "Đồng ý" nhaaa~');
